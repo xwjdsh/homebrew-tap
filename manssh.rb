@@ -7,7 +7,6 @@ class Manssh < Formula
 
   def install
     bin.install "manssh"
-    ...
   end
 
   test do
