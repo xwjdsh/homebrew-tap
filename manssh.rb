@@ -3,7 +3,7 @@ class Manssh < Formula
   homepage "https://github.com/xwjdsh/manssh"
   url "https://github.com/xwjdsh/manssh/releases/download/v0.3.0/manssh_0.3.0_darwin_amd64.tar.gz"
   version "0.3.0"
-  sha256 "173a0ebb46a4b292ece21ce93ef94969f1e8538789ed5152825ebf60ed7ce285"
+  sha256 "f9ebfc48bc6e87293b44716dd87eaf1bc14319c56ec5c2c590d702f1bae873ca"
 
   def install
     bin.install "manssh"
