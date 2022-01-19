@@ -5,21 +5,21 @@
 class Fy < Formula
   desc "A command-line translation tool"
   homepage "https://github.com/xwjdsh/fy"
-  version "0.4.12"
+  version "0.4.13"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.12/fy_0.4.12_Darwin_arm64.tar.gz"
-      sha256 "4a0f6f8d47c2cd30ebfb4f446e9390946af202c917326ba3f8aaaca53288cf29"
+    if Hardware::CPU.intel?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Darwin_x86_64.tar.gz"
+      sha256 "17e87b2865faf511fd9bef08ce467899f84a1bea828ea4312c2e471d79348eec"
 
       def install
         bin.install "fy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.12/fy_0.4.12_Darwin_x86_64.tar.gz"
-      sha256 "b9998fdf2063d060284afc353d3c03943c52627b1fc4efc5a9795d088261cbfe"
+    if Hardware::CPU.arm?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Darwin_arm64.tar.gz"
+      sha256 "224ee297c7928dcc5d8526dba61c93512694d6844bd2cc3a83bc868d31e7cc3e"
 
       def install
         bin.install "fy"
@@ -28,17 +28,17 @@ class Fy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.12/fy_0.4.12_Linux_arm64.tar.gz"
-      sha256 "ca1a0f0e8e58089d2214983ed5f681be95ced2dbba1ffe6e08c8e475a8d8a78b"
+    if Hardware::CPU.intel?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Linux_x86_64.tar.gz"
+      sha256 "d5a1fa382786014bc2eee55c567e348921e27316cc4d60163e070630144ece00"
 
       def install
         bin.install "fy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.12/fy_0.4.12_Linux_x86_64.tar.gz"
-      sha256 "9815a1dfbc38dbd2c2a1b31d275a9d0a401f39e6857d5124e0ecc6cccf1225cc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Linux_arm64.tar.gz"
+      sha256 "31b41f39b4e93380f84081f30cf323eecc2b96455f0066ab502e66c81f0fb510"
 
       def install
         bin.install "fy"
