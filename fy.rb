@@ -5,21 +5,21 @@
 class Fy < Formula
   desc "A command-line translation tool"
   homepage "https://github.com/xwjdsh/fy"
-  version "0.4.13"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Darwin_x86_64.tar.gz"
-      sha256 "17e87b2865faf511fd9bef08ce467899f84a1bea828ea4312c2e471d79348eec"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "8918f94d736cef8e38784fa3c253f14403e1f434fc8c58826f8783874b2cf5eb"
 
       def install
         bin.install "fy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Darwin_arm64.tar.gz"
-      sha256 "224ee297c7928dcc5d8526dba61c93512694d6844bd2cc3a83bc868d31e7cc3e"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "ea87e10319b75ee503df656762e4dc50337669111aaa0d798fab3a3724994142"
 
       def install
         bin.install "fy"
@@ -29,16 +29,16 @@ class Fy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Linux_x86_64.tar.gz"
-      sha256 "d5a1fa382786014bc2eee55c567e348921e27316cc4d60163e070630144ece00"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "2ead95125a80a72fa2da81753427460069ed9a60495284a58eb60f3a0d718f0c"
 
       def install
         bin.install "fy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.4.13/fy_0.4.13_Linux_arm64.tar.gz"
-      sha256 "31b41f39b4e93380f84081f30cf323eecc2b96455f0066ab502e66c81f0fb510"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Linux_arm64.tar.gz"
+      sha256 "8d037b2ce2ba08d811e8c0026660eadcd60dd105bcfeb07229a904757e9c07f9"
 
       def install
         bin.install "fy"
