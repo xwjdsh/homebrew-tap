@@ -5,21 +5,21 @@
 class Fy < Formula
   desc "A command-line translation tool"
   homepage "https://github.com/xwjdsh/fy"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Darwin_x86_64.tar.gz"
-      sha256 "8918f94d736cef8e38784fa3c253f14403e1f434fc8c58826f8783874b2cf5eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.6.0/fy_0.6.0_Darwin_arm64.tar.gz"
+      sha256 "e75e1b8540399bf72f85680de609cc634dcd47d25551951805ffa39df0a5d7c3"
 
       def install
         bin.install "fy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Darwin_arm64.tar.gz"
-      sha256 "ea87e10319b75ee503df656762e4dc50337669111aaa0d798fab3a3724994142"
+    if Hardware::CPU.intel?
+      url "https://github.com/xwjdsh/fy/releases/download/v0.6.0/fy_0.6.0_Darwin_x86_64.tar.gz"
+      sha256 "d697e50549e96d9cd42793ba188d7df9757a2cb74cbe8e135282b85ed9b47102"
 
       def install
         bin.install "fy"
@@ -29,16 +29,16 @@ class Fy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "2ead95125a80a72fa2da81753427460069ed9a60495284a58eb60f3a0d718f0c"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.6.0/fy_0.6.0_Linux_x86_64.tar.gz"
+      sha256 "85e9c42dd322c407f593b0468534d84b92665bc89d531847076709086cf4377b"
 
       def install
         bin.install "fy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xwjdsh/fy/releases/download/v0.5.0/fy_0.5.0_Linux_arm64.tar.gz"
-      sha256 "8d037b2ce2ba08d811e8c0026660eadcd60dd105bcfeb07229a904757e9c07f9"
+      url "https://github.com/xwjdsh/fy/releases/download/v0.6.0/fy_0.6.0_Linux_arm64.tar.gz"
+      sha256 "1837881dc9de18e4d126bc08d6ed23de2802ff88245947ff72ca83032cde9a76"
 
       def install
         bin.install "fy"
